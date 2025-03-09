@@ -760,7 +760,7 @@ function updateLag(manaSpent) {
 
 function addOffline(num) {
     if (num) {
-        if (totalOfflineMs + num < 0 && bonusSpeed > 1) {
+        if (totalOfflineMs + num < 0 && bonusSpeed > 100000) {
             toggleOffline();
         }
         totalOfflineMs += num;
