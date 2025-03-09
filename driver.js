@@ -760,7 +760,7 @@ function updateLag(manaSpent) {
 
 function addOffline(num) {
     if (num) {
-        if (totalOfflineMs + num < 0 && bonusSpeed > 100000) {
+        if (totalOfflineMs + num < 0 && bonusSpeed > 1) {
             toggleOffline();
         }
         totalOfflineMs += num;
@@ -780,7 +780,7 @@ function toggleOffline() {
         checkExtraSpeed();
         document.getElementById("isBonusOn").textContent = _txt("time_controls>bonus_seconds>state>on");
     } else {
-        bonusSpeed = 1;
+        bonusSpeed = 100000;
         bonusActive = false;
 =======
     if (bonusSpeed === 1) {
