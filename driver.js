@@ -773,6 +773,7 @@ function addOffline(num) {
 
 function toggleOffline() {
     if (totalOfflineMs === 0) return;
+<<<<<<< Updated upstream
     if (!isBonusActive()) {
         bonusSpeed = 5;
         bonusActive = true;
@@ -781,6 +782,13 @@ function toggleOffline() {
     } else {
         bonusSpeed = 1;
         bonusActive = false;
+=======
+    if (bonusSpeed === 1) {
+        bonusSpeed = 500000;
+        document.getElementById("isBonusOn").textContent = _txt("time_controls>bonus_seconds>state>on");
+    } else {
+        bonusSpeed = 100000;
+>>>>>>> Stashed changes
         document.getElementById("isBonusOn").textContent = _txt("time_controls>bonus_seconds>state>off");
     }
     setOption("bonusIsActive", bonusActive, true);
